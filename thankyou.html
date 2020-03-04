@@ -208,7 +208,6 @@ div{
             margin: 30px 0 20px 0;
         }
 
-        .subtitle {}
 
         .contents {
             margin-bottom: 40px;
@@ -442,9 +441,55 @@ div{
         }, ['b8a00e7f-ba6a-4a78-8de5-8e1668b95b40']);
     </script>
 
+    <!-- 冠瑜 test 20200304-->
+    <div id="linebasecode"></div>
+    <script>
+        var preUrl = document.referrer;
+        var n = preUrl.includes("utm_source=ten");
+
+        if (n) {
+            console.log("網址裡面有含 utm_source=ten ");
+            // LINE Tag Base Code 20200205ten 
+            // Do Not Modify 
+            (function (g, d, o) {
+                g._ltq = g._ltq || []; g._lt = g._lt || function () { g._ltq.push(arguments) };
+                var h = location.protocol === 'https:' ? 'https://d.line-scdn.net' : 'http://d.line-cdn.net';
+                var s = d.createElement('script'); s.async = 1;
+                s.src = o || h + '/n/line_tag/public/release/v1/lt.js';
+                var t = d.getElementsByTagName('script')[0]; t.parentNode.insertBefore(s, t);
+            })(window, document);
+            _lt('init', {
+                customerType: 'lap',
+                tagId: '2a8e5ae2-7048-4cac-8e64-b7e9831a0a45'
+            });
+            _lt('send', 'pv', ['2a8e5ae2-7048-4cac-8e64-b7e9831a0a45']);
+
+            document.getElementById("linebasecode").innerHTML = `
+        <noscript>
+        <img height="1" width="1" style="display:none"
+            src="https://tr.line.me/tag.gif?c_t=lap&t_id=2a8e5ae2-7048-4cac-8e64-b7e9831a0a45&e=pv&noscript=1" />
+        </noscript>
+        `;
+            // End LINE Tag Base Code
+            _lt('send', 'cv', {
+                type: 'Conversion'
+            }, ['2a8e5ae2-7048-4cac-8e64-b7e9831a0a45']);
+
+            // POPIN
+            window._pop = window._pop || [];
+            window._pop.push(["_set_conversion_id", "viage_tw"]);
+            window._pop.push(["_set_action", "cv"]);
+            (function () {
+                var el = document.createElement("script"); el.type = "text/javascript"; el.async = true;
+                el.src = (("https:" == document.location.protocol) ? "https://" : "http://") + "api.popin.cc/conversion2.js";
+                var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(el, s);
+            })();
+        }
+    </script>
+
     <!-- LINE Tag Base Code 20200205ten-->
     <!-- Do Not Modify -->
-    <script>
+    <!-- <script>
         (function (g, d, o) {
             g._ltq = g._ltq || []; g._lt = g._lt || function () { g._ltq.push(arguments) };
             var h = location.protocol === 'https:' ? 'https://d.line-scdn.net' : 'http://d.line-cdn.net';
@@ -461,13 +506,13 @@ div{
     <noscript>
         <img height="1" width="1" style="display:none"
             src="https://tr.line.me/tag.gif?c_t=lap&t_id=2a8e5ae2-7048-4cac-8e64-b7e9831a0a45&e=pv&noscript=1" />
-    </noscript>
+    </noscript> -->
     <!-- End LINE Tag Base Code -->
-    <script>
+    <!-- <script>
         _lt('send', 'cv', {
             type: 'Conversion'
         }, ['2a8e5ae2-7048-4cac-8e64-b7e9831a0a45']);
-    </script>
+    </script> -->
 
     <!-- LINE Tag Base Code 20200217-->
     <!-- Do Not Modify -->
@@ -495,7 +540,7 @@ div{
             type: 'Conversion'
         }, ['c9de5b63-e1d1-44f4-9b21-d88d3a7c69cd']);
     </script>
-    
+
     <!-- EBiS tag version4.10 start 20200212-->
     <script type="text/javascript">
         (function (a, d, e, b, i, s) {
@@ -530,6 +575,33 @@ div{
         });
     </script>
     <!-- EBiS customize area end -->
+
+    <!-- LINE Tag Base Code 20200304piala-->
+    <!-- Do Not Modify -->
+    <script>
+        (function (g, d, o) {
+            g._ltq = g._ltq || []; g._lt = g._lt || function () { g._ltq.push(arguments) };
+            var h = location.protocol === 'https:' ? 'https://d.line-scdn.net' : 'http://d.line-cdn.net';
+            var s = d.createElement('script'); s.async = 1;
+            s.src = o || h + '/n/line_tag/public/release/v1/lt.js';
+            var t = d.getElementsByTagName('script')[0]; t.parentNode.insertBefore(s, t);
+        })(window, document);
+        _lt('init', {
+            customerType: 'lap',
+            tagId: '508ae9b5-cff8-4136-927b-2f61ea0e850b'
+        });
+        _lt('send', 'pv', ['508ae9b5-cff8-4136-927b-2f61ea0e850b']);
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+            src="https://tr.line.me/tag.gif?c_t=lap&t_id=508ae9b5-cff8-4136-927b-2f61ea0e850b&e=pv&noscript=1" />
+    </noscript>
+    <!-- End LINE Tag Base Code -->
+    <script>
+        _lt('send', 'cv', {
+            type: 'Conversion'
+        }, ['508ae9b5-cff8-4136-927b-2f61ea0e850b']);
+    </script>
 </head>
 
 <body onload="init();" style="margin:0px;">
