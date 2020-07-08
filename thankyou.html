@@ -717,7 +717,26 @@ div{
         }
     </script>
     <script async defer id="rt_script" src="https://track.rentracksw.com/js/rt.sdk.js" type="text/javascript"></script>
-
+    <!-- 20200708 聯盟網 -->
+    <script type="text/javascript">
+        (function () {
+            var VARemoteLoadOptions = {
+                whiteLabel: { id: 8, siteId: 1867, domain: 'vbtrax.com' },
+                conversion: true,
+                conversionData: {
+                    step: 'sale', // conversion name
+                    // revenue: '置入CPA 金額/分潤金額', // revenue share
+                    orderTotal: getJsonFromUrl().payment_total, // order total
+                    order: getJsonFromUrl().order_id, // order number
+                },
+                locale: "en-US", mkt: true
+            };
+            (function (c, o, n, v, e, r, l, y) {
+                c['VARemoteLoadOptions'] = e; r = o.createElement(n), l = o.getElementsByTagName(n)[0];
+                r.async = 1; r.src = v; l.parentNode.insertBefore(r, l);
+            })(window, document, 'script', 'https://cdn.vbtrax.com/javascripts/va.js', VARemoteLoadOptions);
+        })();
+    </script>
 
     <div class="container">
         <div class="pageTitle"><img src="images/title.png" width="320" height="92" title="購物完成" /></div>
