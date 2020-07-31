@@ -182,6 +182,7 @@ div{
             width: 100%;
             font-size: 16px;
         }
+
         .SP {
             display: none;
         }
@@ -671,6 +672,7 @@ div{
 
     <!-- 20200708 聯盟網 -->
     <script type="text/javascript">
+        if (getJsonFromUrl().lp_param_ga1 == 'affiliates') {
             (function () {
                 var VARemoteLoadOptions = {
                     whiteLabel: { id: 8, siteId: 1866, domain: 'vbtrax.com' },
@@ -688,6 +690,7 @@ div{
                     r.async = 1; r.src = v; l.parentNode.insertBefore(r, l);
                 })(window, document, 'script', 'https://cdn.vbtrax.com/javascripts/va.js', VARemoteLoadOptions);
             })();
+        }
     </script>
 
     <div class="container">
